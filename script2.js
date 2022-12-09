@@ -23,8 +23,42 @@ function greeting() {
     //document.write("hello");
     return "Gary"
 }
-function sum() {
-    return 10 + 10;
+function sum(a, b) {
+    global = "affected";
+    return a + b;
 }
 
-console.log(sum());
+console.log(sum(10, 50));
+console.log(global);
+
+let displayValues = function () {
+    console.log("displaying Values ...");
+}
+
+displayValues();
+
+//arrow function
+let traveling = country => "traveling to ..." + country;
+
+travel = traveling("mars");
+console.log(travel);
+
+
+let total = 0;
+function addCart(price) {
+    total = total + price;
+    console.log(total);
+    return total;
+}
+
+
+function calculateTaxes() {
+    subtotal = addcart(2)
+    let totalTax = subtotal * 1.11;
+
+    document.getElementById("receipt")
+    innerHTML =
+        `<p>Subtotal = ${subtotal} </p>
+    <p>Total = ${totalTax}</p>`
+
+}
